@@ -44,8 +44,6 @@ class Program
             {
                 LargeImage = "spoopyghost",
                 LargeText = "Playing Horror House",
-                SmallImage = "spoopyghost",
-                SmallText = "Playing Horror House"
             },
             Timestamps =
             {
