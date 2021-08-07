@@ -1,0 +1,13 @@
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\bin\x86\Release\netcoreapp3.1\HorrorHouse.exe
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\bin\x86\Release\netcoreapp3.1\HorrorHouse.deps.json
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\bin\x86\Release\netcoreapp3.1\HorrorHouse.runtimeconfig.json
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\bin\x86\Release\netcoreapp3.1\HorrorHouse.runtimeconfig.dev.json
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\bin\x86\Release\netcoreapp3.1\HorrorHouse.dll
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\bin\x86\Release\netcoreapp3.1\HorrorHouse.pdb
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.AssemblyInfoInputs.cache
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.AssemblyInfo.cs
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.csproj.CoreCompileInputs.cache
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.dll
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.pdb
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.genruntimeconfig.cache
+C:\Users\smpen\source\repos\HorrorHouse\HorrorHouse\obj\x86\Release\netcoreapp3.1\HorrorHouse.csproj.AssemblyReference.cache

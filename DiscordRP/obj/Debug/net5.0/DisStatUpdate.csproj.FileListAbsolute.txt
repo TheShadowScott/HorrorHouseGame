@@ -1,0 +1,16 @@
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.csproj.AssemblyReference.cache
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.AssemblyInfoInputs.cache
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.AssemblyInfo.cs
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.csproj.CoreCompileInputs.cache
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\DisStatUpdate.exe
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\DisStatUpdate.deps.json
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\DisStatUpdate.runtimeconfig.json
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\DisStatUpdate.runtimeconfig.dev.json
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\DisStatUpdate.dll
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\ref\DisStatUpdate.dll
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\bin\Debug\net5.0\DisStatUpdate.pdb
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.dll
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\ref\DisStatUpdate.dll
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.pdb
+C:\Users\smpen\source\repos\DisStatUpdate\DisStatUpdate\obj\Debug\net5.0\DisStatUpdate.genruntimeconfig.cache
