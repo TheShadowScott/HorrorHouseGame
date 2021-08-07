@@ -1,2 +1,6 @@
-/*/bin
-/*/obj
+/DiscordRP/bin/
+/DiscordRP/obj/
+/HorrorHouse/bin/
+/HorrorHouse/obj/
+/.vs/
+HorrorHouse.sln
