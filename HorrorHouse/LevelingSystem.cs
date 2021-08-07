@@ -17,13 +17,13 @@ namespace Levels
                         Player.maxDamage++;
                         break;
                     case 2:
-                        if (Player.critRate > 0) Player.critRate -= 0.05;
+                        if (Player.critRate > 0) Player.critRate -= 0.025;
                         break;
                     case 3:
                         Player.defence++;
                         break;
                     case 4:
-                        if (Player.dodgeRate > 0.25) Player.dodgeRate -= 0.05;
+                        if (Player.dodgeRate > 0.25) Player.dodgeRate -= 0.025;
                         break;
                     default:
                         Player.maxDamage++;
