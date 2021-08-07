@@ -17,6 +17,9 @@ public class PlayerObject
             Linefeed();
             ConsoleWriteGreen("2 - Warrior");
             Console.WriteLine("Can hit many, many times. Occurs randomly");
+            Linefeed();
+            ConsoleWriteGreen("3 - Rogue");
+            Console.WriteLine("Can backstab your enemy, dealing massive damage.");
             LineSeperator(); Linefeed();
             int classSelect;
             try
@@ -34,6 +37,8 @@ public class PlayerObject
                     return new Wizard();
                 case 2:
                     return new Fighter();
+                case 3:
+                    return new Rogue();
                 default:
                     return "";
             }
@@ -51,11 +56,10 @@ public class PlayerObject
                     if (Player.health > Player.maxHealth) Player.health = Player.maxHealth;
                     ConsoleWriteGreen($"You healed yourself for {heal} health.");
                 }
-                
             }
             private static void FireBall(dynamic MonsterObj)
             {
-                int dmgDealt = refRand.Next(10, 101);
+                int dmgDealt = refRand.Next(10, 31);
                 MonsterObj.health -= dmgDealt;
                 ConsoleWriteGreen($"You used fireball against the {MonsterObj.name} for {dmgDealt} damage.");
             }
@@ -94,6 +98,18 @@ public class PlayerObject
                 for (int i = 0; i < NumHits; i++) damageDealt += refRand.Next(1, Player.maxDamage + 1);
                 ConsoleWriteGreen($"You hit the {MonsterObj.name} {NumHits} extra times for {damageDealt} damage");
                 MonsterObj.health -= damageDealt;
+            }
+        }
+        public class Rogue
+        {
+            public readonly int randHitNum = 5;
+            public void SpecialHit(Player Player, dynamic MonsterObj)
+            {
+                if (MonsterObj.health > 0)
+                {
+                    ConsoleWriteGreen($"BACKSTAB! You did {MonsterObj.health / 2} to the {MonsterObj.name}!");
+                    MonsterObj.health /= 2;
+                }
             }
         }
     }
@@ -135,7 +151,7 @@ public class PlayerObject
                     Console.WriteLine("You did not select a weapon. The Claymore was automatically selected");
                     break;
             }
-      
+
             maxDamage = playerWeapon.maxDamage;
             critRate = playerWeapon.critRate;
             dodgeRate += playerWeapon.stealthDebuff;
