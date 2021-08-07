@@ -31,17 +31,13 @@ public class PlayerObject
                 ConsoleWriteRed("Invalid Response");
                 return "";
             }
-            switch (classSelect)
+            return classSelect switch
             {
-                case 1:
-                    return new Wizard();
-                case 2:
-                    return new Fighter();
-                case 3:
-                    return new Rogue();
-                default:
-                    return "";
-            }
+                1 => new Wizard(),
+                2 => new Fighter(),
+                3 => new Rogue(),
+                _ => "",
+            };
         }
         public class Wizard
         {
@@ -130,27 +126,7 @@ public class PlayerObject
         {
             this.name = name;
             LineSeperator();
-            int weaponSelectionNo = SelectWeapon();
-            dynamic playerWeapon;
-            switch (weaponSelectionNo)
-            {
-                case 1:
-                    playerWeapon = new Claymore();
-                    break;
-                case 2:
-                    playerWeapon = new Dagger();
-                    break;
-                case 3:
-                    playerWeapon = new Rapier();
-                    break;
-                case 4:
-                    playerWeapon = new SpellTome();
-                    break;
-                default:
-                    playerWeapon = new Claymore();
-                    Console.WriteLine("You did not select a weapon. The Claymore was automatically selected");
-                    break;
-            }
+            dynamic playerWeapon = SelectWeapon();
 
             maxDamage = playerWeapon.maxDamage;
             critRate = playerWeapon.critRate;

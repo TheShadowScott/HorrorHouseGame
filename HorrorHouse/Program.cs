@@ -5,7 +5,6 @@ using static BattleMechanics.Battle;
 using static Levels.Leveling;
 using System.Diagnostics;
 using System.Threading;
-using System.IO;
 
 namespace HorrorHouse
 {
@@ -50,12 +49,12 @@ namespace HorrorHouse
         private static void playerLevelUpCheck(double expToAdd)
         {
             Player.exp += expToAdd * (1 + Player.difficulty/3);
-            bool shouldLevel = levelUpCheck(Player.exp, Player.level);
+            bool shouldLevel = LevelUpCheck(Player.exp, Player.level);
             if (shouldLevel)
             {
                 LevelRandom(Player);
                 Player.level++;
-                Player.maxHealth += healthInc(Player.level);
+                Player.maxHealth += HealthInc(Player.level);
                 Player.health = Player.maxHealth;
                 ConsoleWriteGreen($"You are now level {Player.level}!");
                 LineSeperator();
@@ -75,12 +74,12 @@ namespace HorrorHouse
             int defeats = 0;
             while (true)
             {
-                dynamic monster = spawnMonster(Player);
-                monster.spawn();
-                Player.health = Fight(monster, Player);
+                dynamic Monster = SpawnMonster(Player);
+                Monster.Spawn();
+                Player.health = Fight(Monster, Player);
                 if (Player.health <= 0) break;
                 defeats++;
-                playerLevelUpCheck(monster.xp);
+                playerLevelUpCheck(Monster.xp);
             }
             ConsoleWriteRed("You died.");
             Console.WriteLine($"You killed {defeats} monsters...");
@@ -99,9 +98,8 @@ namespace HorrorHouse
                 cont = playGame();
             } while (cont);
             Linefeed();
-            t.Abort();
             Console.WriteLine("Thanks for playing in the Horror House. See you soon ;)");
-            Console.ReadKey();
+            ConsoleWaitOut();
         }
     }
 }

@@ -23,7 +23,7 @@ class Weapon
         }
         return weaponSelection;
     }
-    public static int SelectWeapon()
+    public static dynamic SelectWeapon()
     {
         LineSeperator(); Linefeed();
         ConsoleWriteBlue("Select Your Weapon:");
@@ -45,7 +45,13 @@ class Weapon
         {
             returnFeed = WeaponInput();
         } while (returnFeed == -1);
-        return returnFeed;
+        return returnFeed switch {
+            1 => new Claymore(),
+            2 => new Dagger(),
+            3 => new Rapier(),
+            4 => new SpellTome(),
+            _ => null,
+        };
     }
     public class Claymore
     {

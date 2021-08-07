@@ -6,8 +6,8 @@ namespace Monsters
 {
     class Monster
     {
-        private static Random referenceRandom = new Random();
-        public  static dynamic spawnMonster(PlayerObject.Player Player)
+        private static readonly Random referenceRandom = new Random();
+        public  static dynamic SpawnMonster(PlayerObject.Player Player)
         {
             double chance = referenceRandom.NextDouble();
             chance += 3 * Player.difficulty / 100;
@@ -29,13 +29,13 @@ namespace Monsters
             public readonly string name = "Zombie";
             public readonly double dodgeRate = 0.875;
             public readonly int defense = 0;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleWriteBlue("A Zombie has spawned!");
                 Linefeed();
                 ConsoleWaitOut();
             }
-            public int hit()
+            public int Hit()
             {
                 return referenceRandom.Next(1, 16);
             }
@@ -48,13 +48,13 @@ namespace Monsters
             public readonly double dodgeRate = double.PositiveInfinity;
             public readonly double critRate = 0.825;
             public readonly int defense = 0;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleWriteBlue("A Skeleton Spawned");
                 Linefeed();
                 ConsoleWaitOut();
             }
-            public int hit()
+            public int Hit()
             {
                 int multiplier = 1;
                 bool crit = referenceRandom.NextDouble() > critRate;
@@ -74,13 +74,13 @@ namespace Monsters
             public readonly double dodgeRate = 0.95;
             public readonly double critRate = 0.9275;
             public readonly int defense = 0;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleWriteBlue("A Ghoul has Spawned!");
                 Linefeed();
                 ConsoleWaitOut();
             }
-            public int hit()
+            public int Hit()
             {
                 int multiplier = 1;
                 bool crit = referenceRandom.NextDouble() > critRate;
@@ -117,13 +117,13 @@ namespace Monsters
                 }
                 return summonedImps;
             }
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleWritePurple("A BOSS WARLOCK HAS SPAWNED");
                 ConsoleWaitOut();
                 Linefeed();
             }
-            public int hit()
+            public int Hit()
             {
                 double helperImps = Summon();
                 if (helperImps > 0) ConsoleWriteRed($"The warlock summoned {helperImps} Imp(s) to aid his attack!");
@@ -150,12 +150,12 @@ namespace Monsters
             public readonly double dodgeRate = 0.9275;
             public readonly double critRate = 0.8;
             public readonly int defense = 2;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleWritePurple("A BOSS BONE MAGE HAS APPEARED!");
                 Linefeed();
             }
-            public int hit()
+            public int Hit()
             {
                 int numHits = referenceRandom.Next(1, 6);
                 int damage = 0;
@@ -184,13 +184,13 @@ namespace Monsters
             public readonly double dodgeRate = 0.75;
             public readonly double critRate = 0.7;
             public readonly int defense = 3;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleSummons.DemonSummon();
                 ConsoleWritePurple("DEMONLING");
                 LineSeperator();
             }
-            public int hit()
+            public int Hit()
             {
                 bool crit = referenceRandom.NextDouble() > critRate;
                 int critMult = 1;
@@ -212,14 +212,14 @@ namespace Monsters
             public readonly double dodgeRate = 0.5;
             public readonly double critRate = 0.6;
             public readonly int defense = 5;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleSummons.DemonSummon();
                 ConsoleWritePurple($"{name}");
                 LineSeperator();
 
             }
-            public int hit()
+            public int Hit()
             {
                 bool crit = referenceRandom.NextDouble() > critRate;
                 double critMult = 0.75;
@@ -238,12 +238,11 @@ namespace Monsters
             public int health = 200;
             public readonly double dodgeRate = 0.5;
             public readonly double critRate = 0.5;
-            public void spawn()
+            public void Spawn()
             {
                 ConsoleSummons.DemonSummon();
                 ConsoleWritePurple(name);
                 LineSeperator();
-
             }
             public int hit()
             {

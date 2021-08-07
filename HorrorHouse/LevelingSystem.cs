@@ -31,19 +31,19 @@ namespace Levels
                 }
             }
         }
-        private static double getLevelBracket(double exp)
+        private static double GetLevelBracket(double exp)
         {
             double exponent = Math.Pow(1.000975, -exp);
             double level = (-51.0 * exponent) + 51;
             return Math.Floor(level);
         }
-        public static bool levelUpCheck(double exp, int level)
+        public static bool LevelUpCheck(double exp, int level)
         {
-            int reqLevel = ToInt32(getLevelBracket(exp));
+            int reqLevel = ToInt32(GetLevelBracket(exp));
             if (reqLevel > level) return true;
             return false;
         }
-        public static int healthInc(int level)
+        public static int HealthInc(int level)
         {
             double inc = Math.Floor(Math.Log(level));
             return ToInt32(inc) + 1;

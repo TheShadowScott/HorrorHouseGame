@@ -8,4 +8,8 @@
     <ApplicationIcon>istockphoto-1211501658-170667a.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
 </Project>
