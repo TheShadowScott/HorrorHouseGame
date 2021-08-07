@@ -29,7 +29,7 @@ class Weapon
         ConsoleWriteBlue("Select Your Weapon:");
         Linefeed(); LineSeperator(); Linefeed();
         ConsoleWriteBlue("1: Claymore - Heavy hitter, but strongly debuffs your swiftness");
-        ConsoleWriteInlineGreen("MAX DMG: +10\t"); Console.Write("CRIT: +0%\t"); ConsoleWriteInlineRed("STEALTH: -10%\t"); Console.Write("MAX HEALTH: +0");
+        ConsoleWriteInlineGreen("MAX DMG: +5\t"); Console.Write("CRIT: +0%\t"); ConsoleWriteInlineRed("STEALTH: -10%\t"); Console.Write("MAX HEALTH: +0");
         Linefeed(); Linefeed();
         ConsoleWriteBlue("2: Dagger - Small, fast, and lethal, but makes you squishy");
         ConsoleWriteInlineRed("MAX DMG: -2\t"); ConsoleWriteInlineGreen("CRIT: +50%\t"); ConsoleWriteInlineGreen("STEALTH: +15%\t"); ConsoleWriteInlineRed("MAX HEALTH: -10");
@@ -49,7 +49,7 @@ class Weapon
     }
     public class Claymore
     {
-        public readonly int maxDamage = 20;
+        public readonly int maxDamage = 15;
         public readonly double critRate = 0.85;
         public readonly double stealthDebuff = 0.1;
         public readonly int healthBoost = 0;
