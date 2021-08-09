@@ -183,7 +183,7 @@ namespace Monsters
             public readonly string name = "Demonling";
             public readonly double dodgeRate = 0.75;
             public readonly double critRate = 0.7;
-            public readonly int defense = 3;
+            public readonly int defense = 5;
             public void Spawn()
             {
                 ConsoleSummons.DemonSummon();
@@ -211,7 +211,7 @@ namespace Monsters
             public readonly string name = "Demon Kinght";
             public readonly double dodgeRate = 0.5;
             public readonly double critRate = 0.6;
-            public readonly int defense = 5;
+            public readonly int defense = 10;
             public void Spawn()
             {
                 ConsoleSummons.DemonSummon();
@@ -238,18 +238,19 @@ namespace Monsters
             public int health = 200;
             public readonly double dodgeRate = 0.5;
             public readonly double critRate = 0.5;
+            public readonly int defense = 20;
             public void Spawn()
             {
                 ConsoleSummons.DemonSummon();
                 ConsoleWritePurple(name);
                 LineSeperator();
             }
-            public int hit()
+            public int Hit()
             {
                 int totalDamage = 0;
-                for (int numSwipes = referenceRandom.Next(1, 4); numSwipes > 0; numSwipes--)
+                for (int numSwipes = referenceRandom.Next(1, 6); numSwipes > 0; numSwipes--)
                 {
-                    int indivHit = referenceRandom.Next(1, 31);
+                    int indivHit = referenceRandom.Next(5, 31);
                     bool crit = referenceRandom.NextDouble() > critRate;
                     if (crit) indivHit *= 2;
                     totalDamage += indivHit;

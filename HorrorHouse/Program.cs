@@ -12,13 +12,15 @@ namespace HorrorHouse
     {
         private static PlayerObject.Player Player;
         public static readonly Random randomRef = new Random();
+        private static readonly ProcessStartInfo psi = new ProcessStartInfo
+        {
+            FileName = "C:/Users/smpen/source/repos/HorrorHouse/DiscordRP/bin/Debug/net5.0/DisStatUpdate.exe",
+            UseShellExecute = false,
+            RedirectStandardError = true,
+            RedirectStandardOutput = true
+        };
         private static void DiscordUpdater()
         {
-            ProcessStartInfo psi = new ProcessStartInfo();
-            psi.FileName = "C:/Users/smpen/source/repos/HorrorHouse/DiscordRP/bin/Debug/net5.0/DisStatUpdate.exe";
-            psi.UseShellExecute = false;
-            psi.RedirectStandardError = true;
-            psi.RedirectStandardOutput = true;
             Process proc = Process.Start(psi);
             proc.WaitForExit();
         }
@@ -42,7 +44,7 @@ namespace HorrorHouse
             } while (verifyDifficulty != 0);
 
         }
-        private static void playerLevelUpCheck(double expToAdd)
+        private static void PlayerLevelUpCheck(double expToAdd)
         {
             Player.exp += expToAdd * (1 + Player.difficulty/3);
             bool shouldLevel = LevelUpCheck(Player.exp, Player.level);
@@ -61,7 +63,7 @@ namespace HorrorHouse
                 LineSeperator();
             }
         }
-        private static bool playGame()
+        private static bool PlayGame()
         {
             Welcome();
             int difficultyBuffer = 75 * Convert.ToInt32(Player.difficulty);
@@ -75,7 +77,7 @@ namespace HorrorHouse
                 Player.health = Fight(Monster, Player);
                 if (Player.health <= 0) break;
                 defeats++;
-                playerLevelUpCheck(Monster.xp);
+                PlayerLevelUpCheck(Monster.xp);
             }
             ConsoleWriteRed("You died.");
             Console.WriteLine($"You killed {defeats} monsters...");
@@ -91,7 +93,7 @@ namespace HorrorHouse
             bool cont;
             do
             {
-                cont = playGame();
+                cont = PlayGame();
             } while (cont);
             Linefeed();
             Console.WriteLine("Thanks for playing in the Horror House. See you soon ;)");
