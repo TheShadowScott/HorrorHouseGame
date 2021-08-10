@@ -12,14 +12,17 @@ namespace Monsters
             double chance = referenceRandom.NextDouble();
             chance += 3 * Player.difficulty / 100;
             chance += 0.05 * Player.level;
-            if (chance > 1.95) return new DemonPrince();
-            else if (chance > 1.7) return new DemonKnight();
-            else if (chance > 1.45) return new Demonling();
-            else if (chance > 1.1) return new BoneMage();
-            else if (chance > 0.75) return new Warlock();
-            else if (chance > 0.5) return new Ghoul();
-            else if (chance > 0.3) return new Skeleton();
-            else return new Zombie();
+            return chance switch
+            {
+                var _ when chance > 1.95 => new DemonPrince(),
+                var _ when chance > 1.7 => new DemonKnight(),
+                var _ when chance > 1.45 => new Demonling(),
+                var _ when chance > 1.1 => new BoneMage(),
+                var _ when chance > 0.75 => new Warlock(),
+                var _ when chance > 0.5 => new Ghoul(),
+                var _ when chance > 0.3 => new Skeleton(),
+                _ => new Zombie(),
+            };
         }
 
         public class Zombie
